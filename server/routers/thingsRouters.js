@@ -10,8 +10,6 @@ const things = [
   { thing: "Dormir no existe" },
 ];
 
-/* app.use(express.json()); */
-
 router.get("/", (req, res) => {
   res.status(200).json(things);
   debug("Han pedido cositas");
@@ -33,3 +31,5 @@ router.delete("/things/:idThing", (req, res) => {
   );
   res.status(200).json("Cosita borrada");
 });
+
+module.exports = router;
