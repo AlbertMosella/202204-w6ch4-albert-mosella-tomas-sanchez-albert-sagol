@@ -12,7 +12,8 @@ app.use((req, res, next) => {
 });
 
 const notFoundError = (req, res) => {
-  res.status(404).json({ msg: "Endpoint not found" });
+  res.status(404);
+  res.json({ msg: "Endpoint not found" });
 };
 
 // eslint-disable-next-line no-unused-vars
