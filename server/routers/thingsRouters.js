@@ -15,14 +15,14 @@ router.get("/", (req, res) => {
   debug("Han pedido cositas");
 });
 
-router.post("/things", (req, res) => {
+router.post("/", (req, res) => {
   const thing = req.body;
   debug("Van a crear una cosita", thing);
   res.status(201).json(thing);
   things.push(thing);
 });
 
-router.delete("/things/:idThing", (req, res) => {
+router.delete("/:idThing", (req, res) => {
   const { idThing } = req.params;
   debug("Han eliminado una cosita");
   things.splice(
